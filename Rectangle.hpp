@@ -8,7 +8,7 @@ public:
     Rectangle(double x, double y);
     Rectangle(const Rectangle & other);
 
-    double getArea() const;
+    double getArea() const noexcept override;
     double getPerimeter() const;
     double getX() const;
     double getY() const;

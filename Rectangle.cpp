@@ -12,7 +12,7 @@ Rectangle::Rectangle(const Rectangle &other)
     y_ = other.getY();
 }
 
-double Rectangle::getArea() const
+double Rectangle::getArea() const noexcept
 {
     return x_ * y_;
 }

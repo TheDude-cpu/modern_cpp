@@ -9,14 +9,20 @@ Circle::Circle(double r)
 Circle::Circle(const Circle & other)
 {
     r_ = other.getRadius();
+    
 }
 
-double Circle::getArea() const
+Circle::Circle(Circle && other) : r_(other.getRadius())
+{
+    std::cout << "Circle::Circle(Circle && other) " << r_<< std::endl;
+}
+
+double Circle::getArea() const noexcept
 {
     return M_PI * r_ * r_;
 }
 
-double Circle::getPerimeter() const
+double Circle::getPerimeter() const noexcept
 {
     return 2 * M_PI * r_;
 }

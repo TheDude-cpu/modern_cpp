@@ -2,19 +2,20 @@
 
 #include "Shape.hpp"
 
-class Circle : public Shape
+class Circle final : public Shape
 {
 public:
     Circle(double r);
     Circle(const Circle & other);
+    Circle(Circle && other);
 
-    double getArea() const;
-    double getPerimeter() const;
+    double getArea() const noexcept override;
+    double getPerimeter() const noexcept override;
     double getRadius() const;
-    void print() const;
+    void print() const final;
 
 private:
     Circle(); // doesn't allow to call default constructor
-
+    
     double r_;
 };

@@ -9,9 +9,9 @@
 
 using namespace std;
 
-typedef vector<Shape*> Collection;
+using Collection = vector<Shape*>; // Collection;
 
-bool sortByArea(Shape* first, Shape* second)
+auto sortByArea(Shape* first, Shape* second)
 {
     if(first == NULL || second == NULL)
     {
@@ -20,7 +20,7 @@ bool sortByArea(Shape* first, Shape* second)
     return (first->getArea() < second->getArea());
 }
 
-bool perimeterBiggerThan20(Shape* s)
+auto perimeterBiggerThan20(Shape* s)
 {
     if(s)
     {
@@ -29,7 +29,7 @@ bool perimeterBiggerThan20(Shape* s)
     return false;
 }
 
-bool areaLessThan10(Shape* s)
+auto areaLessThan10(Shape* s)
 {
     if(s)
     {
@@ -75,9 +75,25 @@ void findFirstShapeMatchingPredicate(const Collection& collection,
         cout << "There is no shape matching predicate " << info << endl;
     }
 }
+/*
+    Write a function that calculates n-th Fibonacci's number. Do not mark it constexpr.
+    Add in first line of main() computing 45-th Fibonacci's number. Measure the time of program execution (time ./modern_cpp)
+    Mark fibonacci function as constexpr, compile the program and measure the time of execution once again.
+*/
+int fibonacciN (int n)
+{
+    //int n = 0 ; 
+    if(n == 0) return 0;
+    if(n == 1) return 1;
+    return fibonacciN(n-1)+fibonacciN(n-2);
+}
 
 int main()
 {
+    std::cout<<fibonacciN(45) <<std::endl;
+    
+   /* Circle obj(10);
+    Circle new_obj(std::move(obj));
     Collection shapes;
     shapes.push_back(new Circle(2.0));
     shapes.push_back(new Circle(3.0));
@@ -102,7 +118,7 @@ int main()
 
     findFirstShapeMatchingPredicate(shapes, perimeterBiggerThan20, "perimeter bigger than 20");
     findFirstShapeMatchingPredicate(shapes, areaLessThan10, "area less than 10");
-
+*/
     return 0;
 }
 
