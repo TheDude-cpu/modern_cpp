@@ -12,7 +12,6 @@ Circle::Circle(const Circle & other)
     
 }
 
-
 Circle::Circle(Circle && other) : r_(other.getRadius())
 {
     std::cout << "Circle::Circle(Circle && other) " << r_<< std::endl;

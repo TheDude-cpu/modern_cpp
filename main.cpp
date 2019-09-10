@@ -14,7 +14,7 @@ using Collection = vector<Shape*>; // Collection;
 
 auto sortByArea(Shape* first, Shape* second)
 {
-    if(first == NULL || second == NULL)
+    if(first == nullptr || second == nullptr)
     {
         return false;
     }
@@ -43,7 +43,7 @@ void printCollectionElements(const Collection& collection)
 {
     for(Collection::const_iterator it = collection.begin(); it != collection.end(); ++it)
     {
-        if(*it != NULL)
+        if(*it != nullptr)
         {
             (*it)->print();
         }
@@ -54,7 +54,7 @@ void printAreas(const Collection& collection)
 {
     for(vector<Shape*>::const_iterator it = collection.begin(); it != collection.end(); ++it)
     {
-        if(*it != NULL)
+        if(*it != nullptr)
         {
             cout << (*it)->getArea() << std::endl;
         }
@@ -66,7 +66,7 @@ void findFirstShapeMatchingPredicate(const Collection& collection,
                                      std::string info)
 {
     Collection::const_iterator iter = std::find_if(collection.begin(), collection.end(), predicate);
-    if(*iter != NULL)
+    if(*iter != nullptr)
     {
         cout << "First shape matching predicate: " << info << endl;
         (*iter)->print();
@@ -99,7 +99,7 @@ int main()
     Collection shapes;
     shapes.push_back(new Circle(2.0));
     shapes.push_back(new Circle(3.0));
-    shapes.push_back(NULL);
+    shapes.push_back(nullptr);
     shapes.push_back(new Circle(4.0));
     shapes.push_back(new Rectangle(10.0, 5.0));
     shapes.push_back(new Square(3.0));

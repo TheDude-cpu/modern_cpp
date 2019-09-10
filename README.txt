@@ -9,9 +9,9 @@ Check your g++ version by typing:
     > g++ --version
 It should be >= 5.0
 
-1. static_assert:
+1. static_assert[ok]:
     Assert that M_PI defined in math library in Circle.cpp file is not equal to 3.14
-2. nullptr:
+2. nullptr[ok]:
     Change all NULL/0 to nullptrs
 3. using alias [ok]:
     Change typedefs to using alias
