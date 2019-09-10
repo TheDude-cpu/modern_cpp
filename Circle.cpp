@@ -12,6 +12,7 @@ Circle::Circle(const Circle & other)
     
 }
 
+
 Circle::Circle(Circle && other) : r_(other.getRadius())
 {
     std::cout << "Circle::Circle(Circle && other) " << r_<< std::endl;
@@ -32,9 +33,15 @@ double Circle::getRadius() const
     return r_;
 }
 
+double Circle::checkPi() const
+{
+    return M_PI;
+}
+
 void Circle::print() const
 {
     std::cout << "Circle: radius: " << getRadius() << std::endl
               << "          area: " << getArea() << std::endl
-              << "     perimeter: " << getPerimeter() << std::endl;
+              << "     perimeter: " << getPerimeter() << std::endl
+              << "            PI: " << checkPi() << std::endl;
 }

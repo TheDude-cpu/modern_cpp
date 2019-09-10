@@ -49,6 +49,8 @@ Rectangle.hpp
 /home/sylwia89/kurs_cpp_lato_2019/L07-modern-cpp/modern_cpp/main.cpp
 iostream
 -
+math.h
+-
 vector
 -
 algorithm

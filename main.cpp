@@ -1,4 +1,5 @@
 #include <iostream>
+#include <math.h>
 #include <vector>
 #include <algorithm>
 #include <string>
@@ -90,9 +91,10 @@ int fibonacciN (int n)
 
 int main()
 {
+    static_assert(M_PI > 3.14, "M_PI is smallest then 3,14");
     std::cout<<fibonacciN(45) <<std::endl;
     
-   /* Circle obj(10);
+    Circle obj(10);
     Circle new_obj(std::move(obj));
     Collection shapes;
     shapes.push_back(new Circle(2.0));
@@ -118,7 +120,7 @@ int main()
 
     findFirstShapeMatchingPredicate(shapes, perimeterBiggerThan20, "perimeter bigger than 20");
     findFirstShapeMatchingPredicate(shapes, areaLessThan10, "area less than 10");
-*/
+
     return 0;
 }
 

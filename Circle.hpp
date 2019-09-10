@@ -12,10 +12,12 @@ public:
     double getArea() const noexcept override;
     double getPerimeter() const noexcept override;
     double getRadius() const;
+    double checkPi() const;
     void print() const final;
 
 private:
     Circle(); // doesn't allow to call default constructor
     
     double r_;
+ 
 };
